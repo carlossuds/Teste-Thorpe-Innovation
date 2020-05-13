@@ -1,8 +1,10 @@
 {
-  "name": "gympoint-web",
+  "name": "todo",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@unform/core": "^2.1.0",
+    "@unform/web": "^2.1.0",
     "axios": "^0.19.0",
     "babel-plugin-root-import": "^6.4.1",
     "date-fns": "^2.8.1",

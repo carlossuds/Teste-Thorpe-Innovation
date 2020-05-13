@@ -7,9 +7,9 @@ import authConfig from '../../config/auth';
 
 class SessionController {
   async store(req, res) {
-    const { username, password } = req.body;
+    const { email, password } = req.body;
 
-    const user = await User.findOne({ username });
+    const user = await User.findOne({ email });
 
     if (!user) {
       return res.status(401).json({ error: 'User not found' });

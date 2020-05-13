@@ -6,8 +6,8 @@ import User from '../schemas/User';
 class UserController {
   async store(req, res) {
     const schema = Yup.object().shape({
-      username: Yup.string().required(),
-      email: Yup.string().email(),
+      name: Yup.string().required(),
+      email: Yup.string().email().required(),
       password: Yup.string().required().min(6),
     });
 
@@ -15,16 +15,14 @@ class UserController {
       return res.status(400).json('Validation failed');
     }
 
-    const userExists = await User.findOne({
-      $or: [{ email: req.body.email }, { username: req.body.username }],
-    });
+    const userExists = await User.findOne({ email: req.body.email });
 
     if (userExists) {
       return res.status(400).json({ error: 'User already exists' });
     }
-    const { id, username, email } = await User.create(req.body);
+    const user = await User.create(req.body);
 
-    return res.json({ id, username, email });
+    return res.json(user);
   }
 
   async update(req, res) {
@@ -49,14 +47,14 @@ class UserController {
       res.status(400).json({ error: 'Wrong password' });
     }
 
-    if (user._id !== req.userId) return res.status(401).json('Non authorized');
+    if (!req.userId) return res.status(401).json('Non authorized');
 
     await user.updateOne({
       ...req.body,
       password: await bcrypt.hash(req.body.password, 8),
     });
 
-    return res.json(`${user.username}'s profile updated!`);
+    return res.json(`${user.email}'s profile updated!`);
   }
 
   async index(req, res) {
@@ -68,11 +66,11 @@ class UserController {
   async destroy(req, res) {
     const user = await User.findById(req.userId);
 
-    if (user._id !== req.userId) return res.status(401).json('Non authorized');
+    if (!req.userId) return res.status(401).json('Non authorized');
 
     await user.remove();
 
-    return res.json({ msg: `User ${user.username} was deleted!` });
+    return res.json({ msg: `User ${user.email} was deleted!` });
   }
 }
 export default new UserController();
