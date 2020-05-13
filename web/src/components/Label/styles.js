@@ -6,5 +6,5 @@ export const Text = styled.span`
   font-size: 24px;
   line-height: 29px;
   color: #138a72;
-  margin-top: 37px;
+  height: 37px;
 `;

@@ -3,7 +3,7 @@ import { useField } from '@unform/core';
 
 import { MyInput } from './styles';
 
-export default function Input({ name, ...rest }) {
+export default function Input({ name, children, ...rest }) {
   const inputRef = useRef(null);
   const { fieldName, defaultValue, registerField, error } = useField(name);
   useEffect(() => {
