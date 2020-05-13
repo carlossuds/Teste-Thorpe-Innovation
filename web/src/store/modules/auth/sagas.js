@@ -22,7 +22,7 @@ export function* signIn({ payload }) {
 
     history.push('/main');
   } catch (err) {
-    toast.error('Falha na autenticação, verifique seus dados');
+    toast.error('Authentication failed');
     yield put(signFailure());
   }
 }
@@ -38,10 +38,10 @@ export function* signUp({ payload }) {
       email,
       password,
     });
-
+    toast.success('Great! You can Sign in now');
     history.push('/');
   } catch (err) {
-    toast.error('Falha no cadastro, verifique seus dados');
+    toast.error('Registration failed');
     yield put(signFailure());
   }
 }
