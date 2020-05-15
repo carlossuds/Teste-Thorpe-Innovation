@@ -44,8 +44,8 @@ def flipper_post_install(installer)
   end
 end
 
-target 'iPlant' do
-  # Pods for iPlant
+target 'todo' do
+  # Pods for todo
   pod 'FBLazyVector', :path => "../node_modules/react-native/Libraries/FBLazyVector"
   pod 'FBReactNativeSpec', :path => "../node_modules/react-native/Libraries/FBReactNativeSpec"
   pod 'RCTRequired', :path => "../node_modules/react-native/Libraries/RCTRequired"
@@ -77,7 +77,7 @@ target 'iPlant' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
-  target 'iPlantTests' do
+  target 'todoTests' do
     inherit! :complete
     # Pods for testing
   end
@@ -94,10 +94,10 @@ target 'iPlant' do
   end
 end
 
-target 'iPlant-tvOS' do
-  # Pods for iPlant-tvOS
+target 'todo-tvOS' do
+  # Pods for todo-tvOS
 
-  target 'iPlant-tvOSTests' do
+  target 'todo-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end

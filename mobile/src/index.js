@@ -4,17 +4,21 @@ import {StatusBar} from 'react-native';
 
 import '~/config/ReactotronConfig';
 
+import {PersistGate} from 'redux-persist/integration/react';
+import {Provider} from 'react-redux';
+import {store, persistor} from './store';
+
 import Routes from './routes';
 
 export default function App() {
   return (
     <>
-      <StatusBar hidden={true} barStyle="default" />
-      <Routes />
-      {/*<Provider store={store}>
-      <PersistGate persistor={persistor}>
-      </PersistGate>
-      </Provider>*/}
+      <Provider store={store}>
+        <PersistGate persistor={persistor}>
+          <StatusBar hidden={true} barStyle="dark-content" />
+          <Routes />
+        </PersistGate>
+      </Provider>
     </>
   );
 }

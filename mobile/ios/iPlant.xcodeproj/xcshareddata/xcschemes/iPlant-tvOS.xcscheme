@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-               BuildableName = "iPlant-tvOS.app"
-               BlueprintName = "iPlant-tvOS"
-               ReferencedContainer = "container:iPlant.xcodeproj">
+               BuildableName = "todo-tvOS.app"
+               BlueprintName = "todo-tvOS"
+               ReferencedContainer = "container:todo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
-               BuildableName = "iPlant-tvOSTests.xctest"
-               BlueprintName = "iPlant-tvOSTests"
-               ReferencedContainer = "container:iPlant.xcodeproj">
+               BuildableName = "todo-tvOSTests.xctest"
+               BlueprintName = "todo-tvOSTests"
+               ReferencedContainer = "container:todo.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "iPlant-tvOS.app"
-            BlueprintName = "iPlant-tvOS"
-            ReferencedContainer = "container:iPlant.xcodeproj">
+            BuildableName = "todo-tvOS.app"
+            BlueprintName = "todo-tvOS"
+            ReferencedContainer = "container:todo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "iPlant-tvOS.app"
-            BlueprintName = "iPlant-tvOS"
-            ReferencedContainer = "container:iPlant.xcodeproj">
+            BuildableName = "todo-tvOS.app"
+            BlueprintName = "todo-tvOS"
+            ReferencedContainer = "container:todo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

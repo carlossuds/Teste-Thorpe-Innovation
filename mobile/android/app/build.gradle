@@ -129,7 +129,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.iplant"
+        applicationId "com.todo"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
