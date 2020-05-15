@@ -7,5 +7,4 @@ export const MyInput = styled.TextInput`
   color: #138a72;
   font-size: 20px;
   font-family: 'MontserratAlternates-Regular';
-  margin-bottom: 5%;
 `;

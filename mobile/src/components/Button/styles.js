@@ -6,7 +6,6 @@ export const Container = styled(RectButton)`
   height: 62px;
   background: #138a72;
   border-radius: 100px;
-  margin-top: 52px;
   align-items: center;
   justify-content: center;
   font-family: 'MontserratAlternates-Regular';
@@ -15,6 +14,5 @@ export const Container = styled(RectButton)`
 export const Text = styled.Text`
   color: #fff;
   font-size: 22px;
-  font-weight: bold;
-  font-family: 'MontserratAlternates-Regular';
+  font-family: 'MontserratAlternates-Bold';
 `;

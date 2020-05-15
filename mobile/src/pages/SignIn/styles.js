@@ -5,12 +5,16 @@ export const Container = styled.View`
   width: 100%;
   background-color: #fff;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 `;
 
 export const FormView = styled.View`
   width: 80%;
+  height: 50%;
+  justify-content: space-around;
 `;
+
+export const Duo = styled.View``;
 
 export const ToSignUp = styled.Text`
   font-size: 18px;
@@ -19,6 +23,5 @@ export const ToSignUp = styled.Text`
   align-items: center;
   text-decoration-line: underline;
   color: #138a72;
-  margin-top: 51px;
   font-family: 'MontserratAlternates-Regular';
 `;
