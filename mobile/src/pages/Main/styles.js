@@ -25,7 +25,7 @@ export const List = styled.View`
 `;
 
 export const Item = styled.View`
-  height: 40px;
+  height: 50px;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
