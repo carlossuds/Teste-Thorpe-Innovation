@@ -22,7 +22,27 @@ export function* signIn({payload}) {
 
     // history.push('/dashboard');
   } catch (err) {
-    Alert.alert('Falha na autenticação', 'Verifique seus dados');
+    Alert.alert('Auth failed,check your information');
+    yield put(signFailure());
+  }
+}
+
+export function* signUp({payload}) {
+  try {
+    const {name, email, password, repeat} = payload;
+
+    console.tron.log('name ' + name);
+
+    if (repeat !== password) throw 'Passwords dont match';
+
+    yield call(api.post, 'users', {
+      name,
+      email,
+      password,
+    });
+    Alert.alert('Great! You can Sign in now');
+  } catch (err) {
+    Alert.alert('Registration failed');
     yield put(signFailure());
   }
 }
@@ -44,5 +64,6 @@ export function signOut() {
 export default all([
   takeLatest('persist/REHYDRATE', setToken),
   takeLatest('@auth/SIGN_IN_REQUEST', signIn),
+  takeLatest('@auth/SIGN_UP_REQUEST', signUp),
   takeLatest('@auth/SIGN_OUT', signOut),
 ]);

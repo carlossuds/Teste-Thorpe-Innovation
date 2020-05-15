@@ -11,19 +11,20 @@ import {Container, Content, FormView, Duo, ToSignIn} from './styles';
 
 import logo from '../../assets/todo_logo.png';
 
-import {signInRequest} from '../../store/modules/auth/actions';
+import {signUpRequest} from '../../store/modules/auth/actions';
 
 export default function SignUp({navigation}) {
   const dispatch = useDispatch();
   const formRef = useRef(null);
 
-  function handleSubmit({email, password}) {
-    dispatch(signInRequest(email, password));
+  function handleSubmit({name, email, password, repeat}) {
+    dispatch(signUpRequest(name, email, password, repeat));
+    navigation.navigate('SignIn');
   }
 
   return (
     <Container>
-      <Image source={logo} x />
+      <Image source={logo} />
 
       <Content>
         <FormView>
