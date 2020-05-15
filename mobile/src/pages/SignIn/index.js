@@ -23,7 +23,7 @@ export default function SignIn({navigation}) {
 
   return (
     <Container>
-      <Image source={logo} />
+      <Image source={logo} resizeMode="contain" style={{width: 140}} />
 
       <FormView>
         <Form ref={formRef} onSubmit={handleSubmit}>

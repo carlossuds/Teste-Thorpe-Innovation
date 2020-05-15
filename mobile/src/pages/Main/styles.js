@@ -5,23 +5,30 @@ export const Container = styled.View`
   width: 100%;
   background-color: #fff;
   align-items: center;
-  justify-content: space-around;
 `;
 
 export const FormView = styled.View`
   width: 80%;
-  height: 50%;
   justify-content: space-around;
+  margin-top: 10%;
 `;
 
-export const Duo = styled.View``;
-
-export const ToSignUp = styled.Text`
-  font-size: 18px;
-  line-height: 24px;
-  display: flex;
+export const InputDiv = styled.View`
+  flex-direction: row;
   align-items: center;
-  text-decoration-line: underline;
-  color: #138a72;
-  font-family: 'MontserratAlternates-Regular';
+`;
+
+export const List = styled.View`
+  margin-top: 20%;
+  width: 80%;
+  height: 45%;
+`;
+
+export const Item = styled.View`
+  height: 40px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom-color: #138a72;
+  border-bottom-width: 1px;
 `;

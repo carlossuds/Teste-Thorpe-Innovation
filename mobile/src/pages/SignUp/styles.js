@@ -16,7 +16,6 @@ export const Content = styled.View`
 
 export const FormView = styled.ScrollView.attrs({
   showsVerticalScrollIndicator: false,
-  justifyContent: 'space-between',
 })`
   width: 80%;
 `;
