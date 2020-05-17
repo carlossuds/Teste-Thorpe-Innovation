@@ -8,7 +8,6 @@ import SignIn from '~/pages/SignIn';
 import SignUp from '~/pages/SignUp';
 import Main from '~/pages/Main';
 import ImageEditor from '~/pages/ImageEditor';
-import BeforeAfter from '~/pages/BeforeAfter';
 
 const Stack = createStackNavigator();
 
@@ -26,7 +25,6 @@ export default function Routes() {
         )}
         <Stack.Screen name="Main" component={Main} />
         <Stack.Screen name="ImageEditor" component={ImageEditor} />
-        <Stack.Screen name="BeforeAfter" component={BeforeAfter} />
       </Stack.Navigator>
     </NavigationContainer>
   );
