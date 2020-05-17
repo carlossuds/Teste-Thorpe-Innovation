@@ -4,7 +4,7 @@
 - **Express** - servidor
 - **Bcryptjs** - gerar hash da senha
 - **JsonWebToken** - validar sessions
-- **Mongoose** - para usar MongoDB
+- **Mongoose** - para lidar com MongoDB
 
 ## Tabela de Rotas e suas funcionalidades
 
