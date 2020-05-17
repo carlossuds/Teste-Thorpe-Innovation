@@ -17,4 +17,4 @@
 |DELETE|/users||Deleta o usuário logado na aplicação
 |POST|/todos|Informar um Body com `title`|Cria um ToDo
 |GET|/todos||Retorna todos os ToDos do usuário logado
-|DELETE|/todos/***_id***|***_id***: ID do ToDo|| Deleta o ToDo **se** o usuário logado for o autor
+|DELETE|/todos/```_id```|```_id```: ID do ToDo| Deleta o ToDo **se** o usuário logado for o autor
