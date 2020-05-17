@@ -6,3 +6,11 @@ export const Container = styled.View`
   background-color: #fff;
   align-items: center;
 `;
+
+export const OptionsDiv = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5%;
+  width: 80%;
+`;
