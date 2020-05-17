@@ -7,6 +7,14 @@ export const Container = styled.View`
   align-items: center;
 `;
 
+export const SelectSaveView = styled.View`
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 5%;
+  width: 80%;
+`;
+
 export const OptionsDiv = styled.View`
   flex-direction: row;
   justify-content: space-between;

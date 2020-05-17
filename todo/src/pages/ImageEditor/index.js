@@ -11,8 +11,10 @@ import {
 } from 'react-native-image-filter-kit';
 
 import AdIcon from 'react-native-vector-icons/AntDesign';
+import FaIcon from 'react-native-vector-icons/FontAwesome';
+import McIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-import {Container, OptionsDiv} from './styles';
+import {Container, SelectSaveView, OptionsDiv} from './styles';
 import Button from '~/components/Button';
 
 import logo from '../../assets/todo_logo.png';
@@ -79,7 +81,29 @@ export default function ImageEditor({navigation}) {
         style={{height: 80, width: 80, marginTop: '15%'}}
       />
 
-      <Button title="Select Image" onPress={() => pickImage()} />
+      {imgSource === '' ? (
+        <Button title="Select image" onPress={() => pickImage()} />
+      ) : (
+        <SelectSaveView>
+          <McIcon
+            name="backup-restore"
+            size={30}
+            color="#138a72"
+            onPress={() => pickImage()}
+          />
+          <AdIcon
+            name="forward"
+            size={25}
+            color="#138a72"
+            onPress={() =>
+              navigation.navigate('BeforeAfter', {
+                imgSource,
+                filter,
+              })
+            }
+          />
+        </SelectSaveView>
+      )}
 
       {imgSource !== '' && (
         <>
@@ -88,7 +112,7 @@ export default function ImageEditor({navigation}) {
               <Button
                 title={o}
                 key={options.indexOf(o)}
-                style={{height: 50, width: 50}}
+                style={{height: 40, width: 40}}
                 onPress={() => setFilter(o)}
               />
             ))}
