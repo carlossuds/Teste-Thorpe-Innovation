@@ -1,7 +1,7 @@
 # ToDo Backend
 
 ## Principais Bibliotecas Utilizadas:
-- **Experss* - servidor
+- **Express** - servidor
 - **Bcryptjs** - gerar hash da senha
 - **JsonWebToken** - validar sessions
 - **Mongoose** - para usar MongoDB
